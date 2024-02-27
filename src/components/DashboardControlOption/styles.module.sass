@@ -1,0 +1,120 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	position: relative
+	@include flexCenter
+	padding: 4px
+	border-radius: 8px
+	background-color: var(--color--dashboard-control-panel-bg)
+	transition: all .3s ease-in-out
+	cursor: pointer
+	&.active
+		background-color: var(--color--primary-blue)
+		& .btn
+			&:hover
+				background-color: hsla(212, 66%, 58%, 1)
+				& svg
+					& circle,
+					& path
+						fill: var(--color--white)
+			& svg
+				& circle,
+				& path
+					fill: var(--color--white)
+		&.inputEdit
+			background-color: var(--color--primary-blue)
+		& .title
+			& input
+				color: var(--color--white)
+	&.inputEdit
+		background-color: var(--color--btn-hover-background)
+		& .title
+			margin-right: 8px
+			& input
+				width: 190px!important
+				color: var(--color--primary)
+	& .optionsIcons
+		@include flexCenter
+		& button
+			& svg
+				width: 20px
+				height: 20px
+				& path
+					fill: var(--color--header-btn-icon-color)
+			&:hover
+				background-color: var(--color--input-field-bg)
+				& .input
+					color: var(--color--dashboard-progress-percent-color)
+	& .btn
+		@include flexCenter
+		padding: 6px
+		border-radius: 4px
+		border-width: 1px
+		border-style: solid
+		border-color: transparent
+		& svg
+			& circle
+				fill: var(--color--primary)
+		&.cancel
+			& svg
+				width: 20px
+				height: 20px
+		&:hover
+			background-color: var(--color--btn-hover-background)
+			& svg
+				& circle,
+				& path
+					fill: var(--color--btn-hover-icon)
+		&.active
+			border-color: var(--color--primary-blue)
+			background-color: var(--color--btn-hover-background)
+			& svg
+				& circle
+					fill: var(--color--btn-hover-icon)
+	& .accessWrap
+		position: relative
+		& .accessMenu
+			top: 32px
+			right: unset
+			padding: 12px
+			cursor: default
+			& .accessList
+				display: grid
+				gap: 4px
+				grid-template-columns: repeat(auto-fit,minmax(150px,150px))
+				max-height: 400px
+				overflow: auto
+				padding: 0 10px 10px 0
+				@include scrollBar
+				& .accessItem
+					padding: 10px
+					@include adaptiveFont(14, 12, 18, 16)
+					border-radius: 6px
+					color: var(--color--primary)
+					background-color: var(--color--second-level)
+			& .accessBtn
+				margin-top: 8px
+				gap: 8px
+				@include adaptiveFont(14, 12, 18, 16)
+				color: var(--color--primary)
+				background-color: var(--color--second-level)
+				cursor: pointer
+				&:hover
+					background-color: var(--color--btn-hover-background)
+					& svg
+						& path
+							fill: var(--color--btn-hover-icon)
+				& svg
+					width: 24px
+					height: 24px
+					& path
+						fill: var(--color--header-btn-icon-color)
+
+@media (max-width: 1366px)
+	.root
+		& .btn
+			padding: 4px
+			& svg
+				width: 16px
+				height: 16px

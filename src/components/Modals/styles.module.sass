@@ -1,0 +1,88 @@
+@import '../../sass/functions'
+@import '../../sass/mixins'
+
+.root
+	max-width: 450px
+	&.noWidth
+		max-width: unset
+	& p
+		@include adaptiveFont(14, 12, 18, 16)
+		color: var(--color--primary)
+		&.titlePlaceholder
+			margin-bottom: 4px
+			text-transform: uppercase
+		&.title
+			@include adaptiveFont(16, 14, 20, 16)
+			font-weight: 500
+		&.subTitle
+			margin-bottom: 8px
+			font-weight: 500
+		&.msg
+			color: var(--color--grey)
+		&.desc
+			margin-bottom: 12px
+			font-weight: 500
+			&.warning
+				color: var(--color--task-priority-first)
+			&.info
+				color: var(--color--primary-blue)
+		&.shareWarning
+			& > span
+				display: block
+				font-weight: 500
+				color: var(--color--primary-blue)
+	& .checkWrap
+		margin-bottom: 16px
+		& .label
+			margin-bottom: 8px
+			font-weight: 500
+		& input
+			width: 100%
+	& .wrap
+		margin-bottom: 16px
+		padding: 12px
+		border-radius: 8px
+		background-color: var(--color--second-level)
+		&.withIcon
+			@include flexCenter
+			gap: 8px
+			& > p
+				width: calc(100% - 32px)
+			&.shared
+				& svg
+					width: 32px
+					height: 32px
+					& path
+						fill: var(--color--primary-blue)
+			&.withExample
+				& > p
+					width: calc(100% - 72px)
+			& .exampleIcon
+				@include flexCenter
+				justify-content: center
+				width: 40px
+				height: 40px
+				border-radius: 8px
+				border: 1px solid var(--color--btn-border)
+				& svg
+					& path
+						fill: var(--color--primary)
+	& .inner
+		margin-top: 8px
+		padding: 12px
+		border-radius: 8px
+		background-color: var(--color--dashboard-control-panel-bg)
+	& .btnWrap
+		@include flexCenter
+		justify-content: center
+		gap: 8px
+		& .btnUnView
+			& svg
+				& path
+					stroke: none
+					fill: var(--color--white)
+
+
+@media (max-width: 1366px)
+	.root
+		max-width: 350px

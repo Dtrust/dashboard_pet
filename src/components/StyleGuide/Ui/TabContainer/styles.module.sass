@@ -1,0 +1,35 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	& > *
+		@include flexCenter
+		justify-content: center
+		padding: 10px 12px
+		@include adaptiveFont(14, 12, 17, 15)
+		white-space: nowrap
+		color: var(--color--primary)
+		background-color: var(--color--second-level)
+		transition: all .3s ease-in-out
+		&:first-of-type
+			border-radius: 8px 0 0 8px
+		&:nth-last-of-type(1)
+			border-radius: 0 8px 8px 0
+		&:not(:nth-last-of-type(1))
+			border-right-width: 1px
+			border-right-style: solid
+			border-right-color: var(--color--btn-border)
+		&:hover
+			color: var(--color--btn-hover-icon)
+			background-color: var(--color--btn-hover-background)
+		&:disabled,
+		&[disabled='true']
+			opacity: .2
+			pointer-events: none
+
+
+@media (max-width: 1366px)
+	.root
+		& > *
+			padding: 8px 10px

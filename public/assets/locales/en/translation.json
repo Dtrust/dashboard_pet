@@ -1,0 +1,229 @@
+{
+    "header": {
+        "menu": {
+            "notifications": "Notifications",
+            "tasks": "Tasks",
+            "analytics": "Analytics",
+            "dashboard": "Dashboard",
+            "help": "Help",
+            "settings": "Settings",
+            "logout": "Logout"
+        },
+        "markers": {
+            "create_widget": "Create widget",
+            "access_settings": "Access rights management"
+        }
+    },
+    "period": {
+        "month": "Month",
+        "week": "Week",
+        "yesterday": "Yesterday",
+        "today": "Today"
+    },
+    "dashboard_control_panel": {
+        "dashboard_btn": "Dashboards",
+        "show_btn": "Show",
+        "refresh_btn": "Refresh",
+        "settings_btn": "Settings",
+        "select_grid": "Select grid",
+        "options": {
+            "edit_name": "Edit name",
+            "delete": "Delete dashboard",
+            "hide": "Hide dashboard",
+            "share": "Share dashboard",
+            "copy": "Copy dashboard"
+        },
+        "date_from": "From",
+        "date_to": "To",
+        "modals_placeholder": "Dashboard title",
+        "modal_cancel_btn": "Cancel",
+        "delete_modal": {
+            "title": "Delete dashboard",
+            "shared_msg": "Another user(s) has been granted access to the selected dashboard",
+            "message": "Are you sure you want to delete the selected dashboard with all its charts?",
+            "warning": "Deleted charts are not stored anywhere. You need to create new charts for future use!!!",
+            "delete_btn": "Delete"
+        },
+        "hide_modal": {
+            "title": "Hide dashboard from the panel",
+            "check": "Don't ask anymore",
+            "message": "Are you sure you want to hide the selected dashboard from the panel?",
+            "warning": "To see hidden dashboards, use the corresponding button:",
+            "hide_btn": "Hide"
+        },
+        "share_modal": {
+            "title": "Give access to",
+            "message": "User(s) granted access to the dashboard",
+            "warning_title": "Attention",
+            "warning_msg": "The user must have certain access rights. In case of insufficient rights, it is necessary to give him rights or exclude him from the list of adding access to the dashboard.",
+            "share_btn": "Save",
+            "warning_error": "Selected user(s) with insufficient access rights! It is necessary to exclude the specified user (users) from the list of adding access to the dashboard, or expand the access rights.",
+            "share_btn_error": "Extend rights and save"
+        },
+        "modal_copy": {
+            "title": "Copy dashboard",
+            "placeholder": "Name",
+            "new_title": "{{value}} - Copy(1)",
+            "copy_btn": "Copy"
+        },
+        "refresh_modal": {
+            "title": "Automatic update",
+            "subtitle": "Choose the automatic update interval (min)",
+            "default": "Do not use auto update",
+            "option_1": "5 min.",
+            "option_2": "10 min.",
+            "option_3": "15 min.",
+            "option_4": "20 min.",
+            "btn": "Save"
+        }
+    },
+    "search": {
+        "placeholder": "Search",
+        "clear_btn": "Clear",
+        "up_btn": "Up",
+        "down_btn": "Down"
+    },
+    "system_settings": {
+        "title": "System settings",
+        "lang_title": "Interface language",
+        "theme_title": "Interface theme",
+        "theme_light": "Light",
+        "theme_dark": "Dark",
+        "widgets_title": "Widgets",
+        "widgets_subtitle": "Number of fixed elements",
+        "widgets_more_btn": "More",
+        "widgets_less_btn": "Less",
+        "access_title": "Access rights",
+        "source_1": "Source 1",
+        "source_2": "Source 2",
+        "source_3": "Source 3"
+    },
+    "buttons": {
+        "close": "Close",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "add_board": "Create",
+        "period": "Period",
+        "back": "Go back"
+    },
+    "widgets": {
+        "no_access": "You do not have sufficient rights to view this widget. Please contact your administrator to grant permissions.",
+        "no_access_btn": "No access",
+        "types": {
+            "counter": "Counter",
+            "line_chart": "Line chart",
+            "pie_chart": "Pie chart",
+            "bar_chart": "Bar chart",
+            "table": "Table",
+            "text": "Text"
+        },
+        "menu": {
+            "edit_name": "Edit name",
+            "settings": "Settings",
+            "delete": "Delete",
+            "copy": "Copy",
+            "move": "Move"
+        },
+        "empty": {
+            "add": "Add widget",
+            "text_btn": "Text",
+            "radial_btn": "Radial",
+            "table_btn": "Table",
+            "count_btn": "Count",
+            "bar_btn": "Bar chart",
+            "line_btn": "Line chart"
+        },
+        "counter": {
+            "briefcase_btn": "Data",
+            "excel_btn": "Excel",
+            "share_btn": "Share",
+            "settings_btn": "Settings",
+            "edit_btn": "Edit"
+        },
+        "text": {
+            "modal": {
+                "title": "Edit widget",
+                "subject": "Subject"
+            }
+        },
+        "popup": {
+            "close": "Close window",
+            "settings_btn": "Settings"
+        },
+        "table": {
+            "filled": "Filled",
+            "courier": "Courier",
+            "delivered": "Delivered",
+            "on_time": "On time",
+            "not_in_time": "Not in time"
+        },
+        "quick_actions": {
+            "info_txt": "Drag a column name to group",
+            "excel_btn": "Excel",
+            "print_btn": "Print"
+        }
+    },
+    "create_widget": {
+        "labels": {
+            "title": "Widget title",
+            "scenario": "Scenario",
+            "type": "Widget type",
+            "direction": "Direction"
+        },
+        "direction": {
+            "horizontal": "Horizontal",
+            "vertical": "Vertical"
+        },
+        "settings": {
+            "period": "Data for",
+            "data_label": "Data labels",
+            "search_label": "Find",
+            "axis_x": "Axis X",
+            "axis_y": "Axis Y",
+            "columns": "Колони",
+            "table_available": "Available",
+            "table_in_use": "In use",
+            "field_legend_label": "Label",
+            "field_params_label": "Parameter",
+            "field_value_label": "Value",
+            "field_data_label": "Data",
+            "field_select_label": "Select",
+            "field_group_label": "Group by",
+            "field_function_label": "Function",
+            "field_color_label": "Color",
+            "field_target_label": "Target",
+            "btn": {
+                "plus": "Add",
+                "minus": "Remove"
+            },
+            "filter": {
+                "title": "Filter",
+                "condition_1": "Use",
+                "condition_2": "filtering condition",
+                "advanced_mode": "Advanced mode",
+                "group": "Group of filters"
+            },
+            "text": "Description"
+        },
+        "confirmModal": {
+            "title": "Change the widget type",
+            "danger": "WARNING! The widget type will be changed!",
+            "text": "In case of changing one type of chart to another type, all the settings made will be reset to the initial values. You will not be able to return to the previously saved values!",
+            "banModal": "Do not show this message again",
+            "question": "Change widget type?",
+            "Yes": "Yes",
+            "No": "No"
+        }
+    },
+    "target_panel": {
+        "label": "Target",
+        "setting_title": "Color change",
+        "target_less": "Quantity < Goal",
+        "target_more": "Quantity > Goal"
+    },
+    "access_settings": {
+        "client_label": "Client",
+        "scenario_label": "Scenario"
+    }
+}

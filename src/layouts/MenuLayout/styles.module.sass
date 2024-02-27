@@ -1,0 +1,41 @@
+@import './src/sass/mixins'
+
+.root
+	position: absolute
+	top: 42px
+	right: -215px
+	padding: 0 12px
+	border-radius: 8px
+	background-color: var(--color--dashboard-control-panel-bg)
+	box-shadow: 2px 4px 16px 0 rgba(0, 0, 0, 0.08)
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: -5px
+		display: block
+		width: 0
+		height: 0
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+		border-bottom: 5px solid var(--color--p-click)
+	& > div
+		min-width: 226px
+		@include flexCenter
+		gap: 8px
+		padding: 12px 0
+		cursor: pointer
+		&:not(:last-of-type)
+			border-bottom-width: 1px
+			border-bottom-style: solid
+			border-bottom-color: var(--color--btn-border)
+		& svg
+			& > path
+				fill: var(--color--primary)
+		& p
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+		&:hover
+			& svg
+				& > path
+					fill: var(--color--primary-blue)

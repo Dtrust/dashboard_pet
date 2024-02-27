@@ -1,0 +1,25 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	padding: 8px
+	border-radius: 8px
+	background-color: var(--color--bg)
+	transition: all .3s ease-in-out
+	& svg
+		transition: all .3s ease-in-out
+		& path
+			fill: var(--color--header-btn-icon-color)
+	&:hover
+		background-color: var(--color--btn-hover-background)
+		& svg
+			& path
+				fill: var(--color--btn-hover-icon)
+
+@media (max-width: 1366px)
+	.root
+		padding: 6px
+		& svg
+			width: 20px
+			height: 20px

@@ -1,0 +1,195 @@
+// FlexCenter
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	@content;
+}
+// FlexCenter
+@mixin center {
+	@include flexCenter;
+	justify-content: center;
+	@content;
+}
+
+//Placeholder delay animation
+@mixin placeholdersFont {
+	@content;
+}
+
+@mixin textWidgetSubject{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+
+@mixin scrollBar {
+	&::-webkit-scrollbar{
+		width: 4px;
+	}
+	&::-webkit-scrollbar-thumb{
+		border: 4px solid var(--color--primary);
+		border-radius: 6px;
+	}
+		
+	&::-webkit-scrollbar-track{
+		background: var(--color--stroke);
+		border-left: 1px solid transparent;
+		border-right: 1px solid transparent;
+		background-clip: padding-box;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+	@content;
+}
+
+@mixin placeholdersFontTransparent {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	@content;
+}
+
+$maxWidth: 1920;
+
+@mixin adaptiveFont($maxSize, $minSize, $maxLineHeight, $minLineHeight) {
+	//$addSize: $maxSize - $minSize;
+	//$addLineHeight: $maxLineHeight - $minLineHeight;
+	//$addMinSize: $addSize + $addSize * 0.7;
+	//$addMinLineHeight: $addLineHeight + $addLineHeight * 0.7;
+	//
+	//@media (max-width: 1366px) {
+	//	font-size: calc(
+	//		#{$minSize + px} + #{$addMinSize} * ((100vw - 320px) / #{$maxWidth})
+	//	);
+	//	line-height: calc(
+	//		#{$minLineHeight + px} + #{$addMinLineHeight} * ((100vw - 320px) / #{$maxWidth})
+	//	);
+	//}
+	//@media (min-width: 1366px) {
+	//	font-size: calc(
+	//		#{$minSize + px} + #{$addSize} * (100vw / #{$maxWidth})
+	//	);
+	//	line-height: calc(
+	//		#{$minLineHeight + px} + #{$addLineHeight} * (100vw / #{$maxWidth})
+	//	);
+	//}
+	@media (max-width: 1366px) {
+		font-size: $minSize+px;
+		line-height: $minLineHeight+px;
+	}
+	@media (min-width: 1366px) {
+		font-size: $maxSize+px;
+		line-height: $maxLineHeight+px;
+	}
+}
+
+// Scroll Bar
+@mixin scrollBar {
+	&::-webkit-scrollbar {
+		width: 6px;
+		transition: all 0.5s ease;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 5px;
+		//-webkit-box-shadow: 5px 5px 5px -5px rgba(246, 247, 249, 1) inset;
+		background-color: var(--color--scrollbar-bg);
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background-color: var(--color--input-placeholder)
+	}
+}
+
+//Typography
+@mixin title {
+	@include adaptiveFont(22, 18, 30, 22);
+	font-weight: 500;
+}
+
+@mixin labelUppercase {
+	@include adaptiveFont(12, 12, 16, 16);
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+// Temporary Vision BEGIN
+
+@mixin tempRed {
+	background: rgba(255, 0, 0, .12);
+	outline: 1px dashed red;
+}
+
+@mixin tempGreen {
+	background: rgba(0, 128, 0, .31);
+	outline: 1px dashed green;
+}
+
+@mixin tempBlue {
+	background: rgba(0, 0, 255, .26);
+	outline: 1px dashed blue;
+}
+
+@mixin resetEditable {
+	& p {
+	  font: initial;
+	  font-family: 'Roboto', sans-serif;
+	  font-size: 14px;
+	}
+  
+	& strong {
+	  font-weight: bold;
+	}
+  
+	& i {
+	  font-style: italic;
+	}
+  
+	& ul {
+	  list-style: disc;
+	}
+  
+	& ol {
+	  list-style: decimal;
+	  list-style-type: decimal;
+  
+	  &::marker {
+		color: red;
+	  }
+	}
+  
+	& li {
+	  margin-left: 20px;
+	}
+  
+	& sup {
+	  vertical-align: super;
+	  font-size: smaller;
+	}
+  
+	& sub {
+	  vertical-align: sub;
+	  font-size: smaller;
+	}
+  
+	& h1 {
+	  @include textWidgetSubject;
+	}
+  
+	& h2, & h3, & h4 {
+	  font-weight: bold;
+	}
+  
+	& h2 {
+	  font-size: 1.5em;
+	}
+  
+	& h3 {
+	  font-size: 1.17em;
+	}
+  
+	& h4 {
+	  font-size: 1em;
+	}
+  }
+  

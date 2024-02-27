@@ -1,0 +1,48 @@
+@import '../../../sass/mixins'
+
+.root
+	@include flexCenter
+	gap: 8px
+	& .switchBtn
+		@include flexCenter
+		gap: 8px
+		padding: 6px 12px
+		border-radius: 8px
+		background-color: var(--color--target-btn-bg)
+		&.colorChangeActive
+			min-width: 725px
+		&.fixedHeight
+			height: 48px
+		& > svg
+			width: 32px
+			height: 32px
+			& path
+				fill: var(--color--primary-blue)
+		& .switchBtnLabel
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+		& .settingWrap
+			margin-left: 4px
+			@include flexCenter
+			gap: 12px
+		& .settingTitle
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+		& .settingInput,
+		& .settingColorPicker
+			background-color: var(--color--target-input-bg)
+
+
+@media (max-width: 1366px)
+	.root
+		& .switchBtn
+			&.fixedHeight
+				height: 40px
+			& svg
+				width: 20px
+				height: 20px
+			& .settingWrap
+				margin-left: 0
+				gap: 8px
+			& .settingInput
+				width: 100px

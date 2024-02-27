@@ -1,0 +1,36 @@
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	gap: 4px
+	& .btn
+		@include flexCenter
+		padding: 8px
+		border-radius: 8px
+		border-width: 1px
+		border-style:  solid
+		border-color: var(--color--btn-border)
+		background: var(--color--dashboard-control-panel-bg)
+		cursor: pointer
+		transition: all .3s ease-in-out
+		& svg
+			& path
+				fill: var(--color--primary)
+		&:hover
+			background-color: var(--color--p-hover)
+			& svg
+				& path
+					fill: var(--color--white)
+		&.active
+			background-color: var(--color--p-hover)
+			& svg
+				& path
+					fill: var(--color--white)
+
+@media (max-width: 1366px)
+	.root
+		& .btn
+			padding: 6px
+			& svg
+				width: 20px
+				height: 20px

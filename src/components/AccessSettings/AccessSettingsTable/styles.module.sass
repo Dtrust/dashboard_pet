@@ -1,0 +1,21 @@
+@import '../../../sass/functions'
+@import '../../../sass/mixins'
+
+.root
+	background-color: var(--color--dashboard-control-panel-bg)
+	& .content
+		min-height: 700px
+		overflow: auto
+		padding: 16px 0
+		& .table
+			font-size: unset
+			line-height: unset
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+			& .fixedCell
+				background-color: var(--color--dashboard-control-panel-bg)
+
+
+.cell
+	@include flexCenter
+	justify-content: center

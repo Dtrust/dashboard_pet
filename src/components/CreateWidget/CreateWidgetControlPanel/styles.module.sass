@@ -1,0 +1,65 @@
+@import '../../../sass/mixins'
+
+.root
+	border-top: 1px solid
+	border-bottom: 1px solid
+	border-color: var(--color--stroke)
+	background-color: var(--color--dashboard-control-panel-bg)
+	& .content
+		padding-top: 60px
+		padding-bottom: 16px
+		@include flexCenter
+		gap: 12px
+		& .contentWrap
+			flex: 1
+			@include flexCenter
+			gap: 12px
+		& .btnIcon
+			& svg
+				width: 24px
+				height: 24px
+		& .divider
+			height: 40px
+		& .wrap
+			position: relative
+			&.fieldWrap
+				width: 20%
+				& .input
+					width: 100%
+			&.actions
+				@include flexCenter
+				justify-content: flex-end
+				gap: 8px
+			& .label
+				position: absolute
+				top: -20px
+				@include adaptiveFont(14, 12, 18, 16)
+				font-weight: 500
+				color: var(--color--primary)
+			& .directionWrap
+				@include flexCenter
+				gap: 4px
+		& .btn
+			padding: 8px 16px
+			&.horizontal
+				& svg
+					transform: rotate(90deg)
+			&.saveBtn
+				color: var(--color--white)
+				background-color: var(--color--primary-blue)
+				&:hover
+					background-color: var(--color--p-hover)
+				& svg
+					& path
+						fill: var(--color--white)
+
+@media (max-width: 1366px)
+	.root
+		& .content
+			padding-top: 50px
+			& .btnIcon
+				& svg
+					width: 20px
+					height: 20px
+			& .divider
+				height: 32px

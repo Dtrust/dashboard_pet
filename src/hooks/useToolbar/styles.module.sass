@@ -1,0 +1,22 @@
+.showButton
+    margin-left: 9px !important
+    margin-right: 11px !important
+    box-sizing: border-box !important
+    padding: 8px !important
+    border-radius: 8px
+    transition: all .2s ease-in-out !important
+.buttonActive
+    background-color: var(--ck-color-button-default-active-background) !important
+    & svg
+        & path
+            fill: var(--color--btn-hover-icon) !important
+
+.buttonPassive
+    & svg
+        & path
+            fill: var(--color--primary)
+    &:hover
+        background-color: var(--ck-color-button-default-active-background) !important
+        & svg
+            & path
+                fill: var(--color--btn-hover-icon) !important

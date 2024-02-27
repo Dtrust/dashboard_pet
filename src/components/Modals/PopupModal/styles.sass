@@ -1,0 +1,20 @@
+@import './src/sass/mixins'
+
+.PopupModal 
+    & .ant-modal-content
+        background-color: var(--color--dashboard-control-panel-bg)
+        width: 100%
+        height: 750px
+    & .ant-modal-body
+        @include center
+        height: 89%
+    & .ant-modal-header
+        background-color: var(--color--dashboard-control-panel-bg)
+        margin-bottom: 0
+    & .ant-modal-footer
+        @include center
+        gap: 8px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 20px

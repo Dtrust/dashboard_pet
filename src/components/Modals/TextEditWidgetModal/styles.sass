@@ -1,0 +1,19 @@
+@import './src/sass/mixins'
+
+.ant-modal-root
+    z-index: 2001
+
+.textWidgetModal 
+    & .ant-modal-content
+        background-color: var(--color--dashboard-control-panel-bg)
+        height: 660px
+        max-height: 660px
+    & .ant-modal-header
+        background-color: var(--color--dashboard-control-panel-bg)
+    & .ant-modal-footer
+        @include center
+        gap: 8px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 12px

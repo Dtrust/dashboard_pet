@@ -1,0 +1,44 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	& .inputWrap
+		position: relative
+		max-width: 215px
+		& .input
+			width: 100%
+			padding-right: 75px
+		& .inputActions
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			right: 4px
+			@include flexCenter
+		& .btn
+			@include flexCenter
+			padding: 6px
+			border-radius: 4px
+			border-width: 1px
+			border-style: solid
+			border-color: transparent
+			& svg
+				& circle
+					fill: var(--color--primary)
+			&.cancel
+				& svg
+					width: 20px
+					height: 20px
+			&:hover
+				background-color: var(--color--btn-hover-background)
+				& svg
+					& circle,
+					& path
+						fill: var(--color--btn-hover-icon)
+			&.active
+				border-color: var(--color--primary-blue)
+				background-color: var(--color--btn-hover-background)
+				& svg
+					& circle
+						fill: var(--color--btn-hover-icon)
+	& .addBtn
+		border-color: var(--color--primary-blue)

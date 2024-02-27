@@ -1,0 +1,52 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+
+.root
+	@include flexCenter
+	justify-content: center
+	min-width: 113px
+	padding: 8px 16px
+	border-radius: 56px
+	transition: all .3s ease-in-out
+	& span
+		font-family: 'Roboto', sans-serif
+		@include adaptiveFont(14, 12, 18, 16)
+	& svg
+		margin-right: 8px
+	&.primary
+		color: var(--color--white)
+		background-color: var(--color--primary-blue)
+		& svg
+			& path
+				stroke: var(--color--white)
+		&:hover
+			background-color: var(--color--p-hover)
+	&.transparent
+		border-width: 1px
+		border-style: solid
+		border-color: var(--color--btn-border)
+		color: var(--color--primary)
+		background-color: transparent
+		& svg
+			& path
+				stroke: var(--color--btn-hover-icon)
+				fill: var(--color--btn-hover-icon)
+		&:hover
+			border-color: var(--color--primary-blue)
+	&.red
+		color: var(--color--white)
+		background-color: var(--color--task-priority-first)
+		& svg
+			& path
+				stroke: var(--color--white)
+				fill: var(--color--white)
+		&:hover
+			opacity: .7
+
+@media (max-width: 1366px)
+	.root
+		padding: 8px
+		& svg
+			width: 20px
+			height: 20px

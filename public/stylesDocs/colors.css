@@ -1,0 +1,77 @@
+:root {
+	--color--light--primary-blue: #417ec3;
+	--color--light--bg: #f6f7f9;
+	--color--light--stroke: #ebeef4;
+	--color--light--primary: #383838;
+	--color--light--grey: #787878;
+	--color--light--primary-light: #f5faff;
+	--color--light--task-priority-first: #d73737;
+	--color--light--task-priority-second: #ffc800;
+	--color--light--task-priority-third: #55c242;
+	--color--light--white: white;
+	--color--light--first-level: #ebf4ff;
+	--color--light--second-level: #fafafa;
+	--color--light--third-level: #cadbfc;
+	--color--light--fourth-level: #166ae9;
+	--color--light--p-hover: #4d8fdb;
+	--color--light--p-click: #366fb5;
+	--color--dark--primary-blue: #417ec3;
+	--color--dark--bg: #202832;
+	--color--dark--stroke: #313e4e;
+	--color--dark--primary: white;
+	--color--dark--grey: #8299b5;
+	--color--dark--primary-light: #f5faff;
+	--color--dark--task-priority-first: #f94e4e;
+	--color--dark--task-priority-second: #ffdc5c;
+	--color--dark--task-priority-third: #55c242;
+	--color--dark--white: white;
+	--color--dark--first-level: #28323e;
+	--color--dark--second-level: #2e3848;
+	--color--dark--third-level: #3c4a5d;
+	--color--dark--fourth-level: #49596f;
+	--color--dark--p-hover: #4d8fdb;
+	--color--dark--p-click: #366fb5;
+	/*Fixed*/
+	--color--primary: #383838;
+/*Buttons*/
+	--color--btn-hover-background: hsla(210, 100%, 98%, 1);
+	--color--btn-hover-color: hsla(0, 0%, 22%, 1);
+	--color--btn-hover-icon: hsla(212, 66%, 58%, 1);
+	--color--btn-border: hsla(220, 31%, 94%, 1);
+	--color--btn-close-bg: hsla(0, 100%, 98%, 1);
+/*//EmptyWidget Buttons*/
+	--color--header-btn-icon-color: hsla(220, 31%, 94%, 1);
+/*//Dashboard Control Panel*/
+	--color--dashboard-control-panel-bg: hsla(0, 0%, 100%, 1);
+/*//Dashboard Grid Selector*/
+	--color--dashboard-grid-selector-bg: hsla(0, 0%, 100%, 1);
+	--color--dashboard-grid-selector-selected-cell-bg: hsla(213, 100%, 96%, 1);
+/*//Dashboard Progress Percent*/
+	--color--dashboard-progress-percent-color: hsla(212, 52%, 51%, 1);
+	/*//Tab Buttons*/
+	--color--tab-btn-bg: hsla(210, 100%, 98%, 1);
+/*//Input Fields*/
+	--color--input-field-bg: hsla(0, 0%, 100%, 1);
+	--color--input-placeholder: hsla(213, 26%, 61%, 1);
+}
+
+
+input {
+	height: 40px;
+	padding: 10px 16px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	border-radius: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color--btn-border);
+	color: var(--color--primary);
+	background-color: var(--color--input-field-bg); }
+input:focus-visible {
+	outline: none;
+	border-color: var(--color--third-level); }
+input::placeholder {
+	font-size: 14px;
+	font-size-line-height: 18px;
+	color: var(--color--input-placeholder); }

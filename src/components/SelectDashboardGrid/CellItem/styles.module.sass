@@ -1,0 +1,18 @@
+.root
+	width: 68px
+	height: 42px
+	position: relative
+	background-color: var(--color--second-level)
+	border-radius: 4px
+	border-width: 1px
+	border-style: solid
+	border-color: var(--color--stroke)
+	cursor: pointer
+	transition: background-color 0.2s
+	&.active,
+	&.highlighted
+		background-color: var(--color--dashboard-grid-selector-selected-cell-bg)
+	&.active
+		border-color: var(--color--third-level)
+	&.highlighted
+		border-color: var(--color--primary-blue)

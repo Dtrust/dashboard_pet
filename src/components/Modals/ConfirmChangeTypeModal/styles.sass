@@ -1,0 +1,19 @@
+@import './src/sass/mixins'
+
+.ConfirmModal 
+    & .ant-modal-content
+        background-color: var(--color--dashboard-control-panel-bg)
+        width: 500px
+        height: 350px
+    & .ant-modal-body
+        height: 65%
+    & .ant-modal-header
+        background-color: var(--color--dashboard-control-panel-bg)
+        margin-bottom: 0
+    & .ant-modal-footer
+        @include center
+        gap: 8px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 12px

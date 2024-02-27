@@ -1,0 +1,53 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	& .openBtn
+		position: relative
+		&.active
+			background-color: var(--color--p-click)
+			&::after
+				content: ''
+				position: absolute
+				right: -4px
+				display: block
+				width: 0
+				height: 0
+				border-top: 5px solid transparent
+				border-bottom: 5px solid transparent
+				border-left: 5px solid var(--color--p-click)
+			& svg
+				& path
+					fill: var(--color--white)
+	& .dateContainer
+		margin-left: 8px
+		@include flexCenter
+		gap: 8px
+		& .tabContainer
+			& .tabBtn
+				&.active
+					font-weight: 500
+					color: var(--color--btn-hover-icon)
+					background-color: var(--color--tab-btn-bg)
+		& .datePicker
+			width: 185px
+			border: 1px solid var(--color--stroke)
+			color: var(--color--primary)!important
+			background-color: transparent
+			& svg
+				& path
+					fill: var(--color--primary)
+			& > .ant-picker-input
+				width: 75px!important
+				& > input
+					color: inherit!important
+		& .dropdownPicker
+			box-shadow: 8px 3px 22px 10px rgba(150, 150, 150, 0.11)
+
+@media (max-width: 1366px)
+	.root
+		& .dateContainer
+			& .datePicker
+				width: 160px
+				padding: 3px 8px

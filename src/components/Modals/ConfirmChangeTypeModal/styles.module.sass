@@ -1,0 +1,36 @@
+.content
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    font-family: 'Roboto', sans-serif
+    font-size: 14px
+    font-weight: 400
+    color: var(--color--primary)
+
+.message
+    display: flex
+    align-items: center
+    gap: 5px
+    background: var(--color--message-bg)
+    padding: 8px
+    border-radius: 8px
+    & .dangerIcon
+        margin: 5px
+    & b
+        font-weight: 500
+
+.question
+    color: var(--color--danger)
+    font-weight: 500
+
+.ban
+    & span
+        &:nth-child(3)
+            font-size: 14px
+        &:nth-child(2)
+            width: 24px
+            height: 24px
+
+       
+    

@@ -1,0 +1,41 @@
+@import '../../../../../sass/mixins'
+
+.root
+	flex: 0 0 50%
+	padding: 12px 16px
+	border-radius: 12px
+	border-width: 1px
+	border-style: solid
+	border-color: var(--color--btn-border)
+	background-color: var(--color--dashboard-control-panel-bg)
+	& .tableBlockTitle
+		margin-bottom: 8px
+		@include adaptiveFont(14, 12, 18, 16)
+		font-weight: 500
+		color: var(--color--primary)
+	& .tableBlockData
+		padding-right: 10px
+		height: 310px
+		overflow-y: auto
+		@include scrollBar
+		&.inUse
+			& > div
+				& > div
+					position: relative
+					overflow: hidden
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 4px
+						height: 100%
+						background-color: var(--color--task-priority-third)
+
+
+@media (max-width: 1366px)
+	.root
+		padding: 8px 12px
+		& .tableBlockTitle
+			margin-bottom: 5px

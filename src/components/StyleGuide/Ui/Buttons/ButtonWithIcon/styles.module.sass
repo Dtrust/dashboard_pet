@@ -1,0 +1,36 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	padding: 12px
+	border-radius: 8px
+	color: var(--color--primary)
+	background-color: var(--color--bg)
+	transition: all .3s ease-in-out
+	& svg
+		margin-right: 8px
+		transition: all .3s ease-in-out
+		& path
+			fill: var(--color--primary)
+	& span
+		@include adaptiveFont(14, 12, 18, 15)
+	&:hover
+		color: var(--color--btn-hover-color)
+		background-color: var(--color--btn-hover-background)
+		& svg
+			& path
+				fill: var(--color--btn-hover-icon)
+	//&:focus
+	//	background-color: var(--color--primary-light)
+	&.active
+		background-color: var(--color--btn-hover-background)
+		& svg
+			& path
+				fill: var(--color--btn-hover-icon)
+
+@media (max-width: 1366px)
+	.root
+		& svg
+			width: 20px
+			height: 20px

@@ -1,0 +1,54 @@
+@import './src/sass/mixins'
+
+.root
+	position: relative
+	& .btn
+		@include flexCenter
+		justify-content: space-between
+		gap: 8px
+		padding: 9px 16px
+		border-radius: 8px
+		border-width: 1px
+		border-style: solid
+		border-color: var(--color--stroke)
+		color: var(--color--primary)
+		& span
+			display: inline-block
+			width: 148px
+			@include adaptiveFont(16, 12, 18, 16)
+		& .btnIcon
+			@include flexCenter
+			transition: all .3s ease-in-out
+		&.active
+			border-color: var(--color--primary-blue)
+		&:hover
+			background-color: var(--color--btn-hover-background)
+	& .dropdown
+		position: absolute
+		margin-top: 5px
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(58px, 1fr))
+		grid-gap: 4px
+		width: 300px
+		padding: 8px
+		border-radius: 5px
+		background-color: var(--color--dashboard-grid-selector-bg)
+		box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, .08)
+		z-index: 1
+		&::before
+			content: ''
+			position: absolute
+			top: -4px
+			left: 15px
+			display: block
+			width: 0
+			height: 0
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			border-bottom: 5px solid var(--color--primary-blue)
+
+@media (max-width: 1366px)
+	.root
+		& .btn
+			& span
+				width: unset

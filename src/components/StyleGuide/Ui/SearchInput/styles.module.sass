@@ -1,0 +1,50 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	position: relative
+	& .searchInput
+		width: 100%
+		padding-right: 110px
+	& .searchActions
+		@include flexCenter
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		right: 10px
+		& .searchActionsWrap
+			@include flexCenter
+			gap: 8px
+		& .searchBtn
+			width: 24px
+			height: 24px
+			border-radius: 8px
+			& svg
+				& path
+					fill: var(--color--btn-hover-icon)
+		& .actionBtn
+			@include flexCenter
+			justify-content: center
+			width: 24px
+			height: 24px
+			border-radius: 4px
+			&.up
+				& svg
+					transform: rotate(180deg) translate(0, -1px)
+			&:hover
+				background-color: var(--color--btn-hover-background)
+				& svg
+					& path
+						fill: var(--color--btn-hover-icon)
+			&.close
+				&:hover
+					background-color: var(--color--btn-close-bg)
+					& svg
+						& path
+							fill: var(--color--task-priority-first)
+
+@media (max-width: 1366px)
+	.root
+		& svg
+			width: 20px
+			height: 20px

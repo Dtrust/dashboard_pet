@@ -1,0 +1,105 @@
+@import './src/sass/mixins'
+
+.blockClicks
+	pointer-events: none
+
+.root
+	height: 100%
+	display: flex
+	flex-direction: column
+	& .wrap,
+	& .actions
+		@include flexCenter
+	& .wrap
+		justify-content: space-between
+	& .actions
+		gap: 4px
+		& button
+			background-color: transparent
+			& svg
+				& path,
+				& circle
+					fill: var(--color--primary)
+			&:hover
+				background-color: var(--color--btn-hover-background)
+				& svg
+					& path,
+					& circle
+						fill: var(--color--btn-hover-icon)
+	& .menuWrap
+		position: relative
+		& .menu
+			top: 0
+			right: 40px
+			&::before
+				content: ""
+				position: absolute
+				top: 15px
+				right: -10px
+				display: block
+				width: 0
+				height: 0
+				border-top: 5px solid transparent
+				border-bottom: 5px solid transparent
+				border-left: 5px solid var(--color--p-click)
+	& .widgetType
+		@include adaptiveFont(12, 10, 16, 12)
+		font-weight: 500
+		text-transform: uppercase
+		color: var(--color--header-btn-icon-color)
+	& .title
+		max-width: 330px
+		@include adaptiveFont(16, 14, 20, 16)
+		font-weight: 500
+		color: var(--color--primary)
+		cursor: pointer
+	& .titleEdit
+		& input
+			@include adaptiveFont(16, 14, 20, 16)
+			font-weight: 500
+			color: var(--color--primary)
+			padding: 2px 0
+		&.inputEdit
+			& input
+				width: 300px!important
+				border-width: 1px
+				border-style: solid
+				border-color: var(--color--btn-border)
+	& .dataContainer
+		flex: 1
+		margin-top: 12px
+		& > div
+			height: 100%
+	& .selectWrap
+		margin-top: 8px
+		@include flexCenter
+		gap: 8px
+		& .select
+			max-width: 120px
+		& .selectTime
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+			opacity: .8
+	& .noAccess
+		@include flexCenter
+		flex-direction: column
+		justify-content: center
+		padding: 10px
+		border-radius: 8px
+		background-color: var(--color--second-level)
+		& svg
+			width: 56px
+			height: 56px
+		& p
+			max-width: 350px
+			margin: 8px auto
+			@include adaptiveFont(14, 12, 18, 16)
+			text-align: center
+			color: var(--color--primary)
+
+@media (max-width: 1366px)
+	.root
+		& .noAccess
+			& svg
+				width: 40px
+				height: 40px

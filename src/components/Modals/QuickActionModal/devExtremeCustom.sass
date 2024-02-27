@@ -1,0 +1,61 @@
+@import '../../../sass/functions'
+@import '../../../sass/mixins'
+
+.dx-datagrid
+	& .dx-column-lines > td
+		//border-right: 1px solid var(--color--btn-border)!important
+		//border-left: 1px solid var(--color--btn-border) !important
+		border: 1px solid var(--color--btn-border)!important
+	& .dx-row-lines > td
+		border-bottom: 1px solid var(--color--btn-border) !important
+	& .dx-sort-down::before,
+	& .dx-sort-up::before
+		content: ""!important
+		width: 0
+		height: 0
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+		border-top: 7px solid var(--color--primary-blue)
+		display: block
+		border-radius: 2px
+	& .dx-sort-up::before
+		transform: rotate(180deg)
+
+.dx-datagrid-borders > .dx-datagrid-filter-panel,
+.dx-datagrid-borders > .dx-datagrid-headers
+	border-top: 1px solid var(--color--btn-border) !important
+
+.dx-datagrid-headers
+	border-bottom: unset
+
+.dx-datagrid-borders > .dx-datagrid-headers,
+.dx-datagrid-borders > .dx-datagrid-rowsview,
+.dx-datagrid-borders > .dx-datagrid-total-footer
+	border-right: 1px solid var(--color--btn-border) !important
+	border-left: 1px solid var(--color--btn-border) !important
+
+.dx-datagrid-borders .dx-datagrid-rowsview,
+.dx-datagrid-headers + .dx-datagrid-rowsview,
+.dx-datagrid-rowsview.dx-datagrid-after-headers
+	border-top: 1px solid var(--color--btn-border) !important
+
+.dx-datagrid-borders > .dx-datagrid-rowsview,
+.dx-datagrid-borders > .dx-datagrid-total-footer
+	border-bottom: 1px solid var(--color--btn-border) !important
+
+.dx-context-menu .dx-submenu
+	padding: 0 12px
+	border-radius: 8px
+	border: 1px solid var(--color--btn-border) !important
+	background-color: var(--color--dashboard-control-panel-bg) !important
+	box-shadow: 2px 4px 16px 0 rgba(0, 0, 0, 0.08)
+
+.dx-overlay-content.dx-inner-overlay.dx-context-menu.dx-datagrid.dx-menu-base
+	background-color: unset!important
+
+.dx-menu-base .dx-menu-item .dx-menu-item-content .dx-menu-item-text
+	color: var(--color--primary) !important
+
+.dx-datagrid-container.dx-context-menu .dx-menu-items-container .dx-icon-context-menu-sort-desc::before,
+.dx-datagrid.dx-context-menu .dx-menu-items-container .dx-icon-context-menu-sort-desc::before
+	color: var(--color--primary) !important

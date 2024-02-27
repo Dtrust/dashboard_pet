@@ -1,0 +1,83 @@
+@import '../../../sass/mixins'
+
+.root
+	flex: 1
+	min-width: 610px
+	.panel
+		@include flexCenter
+		gap: 8px
+		padding: 12px 16px
+		border-radius: 8px 8px 0 0
+		border: 1px solid var(--color--target-btn-bg)
+		background-color: var(--color--target-btn-bg)
+		& .titleWrap
+			@include flexCenter
+			gap: 8px
+			& .icon
+				& svg
+					& path
+						fill: var(--color--primary-blue)
+			& .title
+				@include adaptiveFont(14, 12, 18, 16)
+				color: var(--color--primary)
+		& .condition
+			flex: 1
+			@include flexCenter
+			gap: 8px
+			& .conditionWrap
+				flex: 1
+				@include flexCenter
+				gap: 8px
+				& .divider
+					height: 16px
+					background-color: #D1E6FF
+			& .conditionTitle
+				@include adaptiveFont(14, 12, 18, 16)
+				color: var(--color--primary)
+			& .select
+				max-width: 97px
+			& .advancedMode
+				@include flexCenter
+				gap: 8px
+	& .filterContent
+		padding: 7px 12px 12px 12px
+		border-radius: 0 0 8px 8px
+		border: 1px solid var(--color--filter-content-border)
+		border-top: none
+		background-color: var(--color--filter-content-bg)
+		& .filterContentRow
+			&.group
+				display: block
+				padding: 12px 8px 12px 16px
+				border-left: 5px solid #C9DAFC
+				& .groupTitle
+					@include adaptiveFont(14, 12, 18, 16)
+					font-weight: 500
+					text-transform: uppercase
+					color: var(--color--primary-blue)
+				& .groupCondition
+					width: 100%
+					@include flexCenter
+					gap: 8px
+					& .conditionTitle
+						@include adaptiveFont(14, 12, 18, 16)
+						color: var(--color--primary)
+					& .select
+						max-width: 80px
+				& .groupContent
+					& .filterContentRow
+						flex: 1
+
+
+@media (max-width: 1366px)
+	.root
+		.panel
+			padding: 10px 12px
+			& .titleWrap
+				& .icon
+					& svg
+						width: 20px
+						height: 20px
+			& .condition
+				& .select
+					height: 27px !important

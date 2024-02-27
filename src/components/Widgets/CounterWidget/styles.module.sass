@@ -1,0 +1,28 @@
+@import './src/sass/mixins'
+
+.root
+	position: relative
+	@include flexCenter
+	flex-direction: column
+	justify-content: center
+	width: 100%
+	border-radius: 8px
+	background-color: var(--color--widget-count-bg)
+	& .dataValue
+		@include adaptiveFont(80, 48, 80, 48)
+		color: var(--color--task-priority-third)
+	& .dataLabel
+		@include adaptiveFont(14, 12, 16, 16)
+		font-weight: 500
+		color: var(--color--task-priority-third)
+	& .dataGoal
+		position: absolute
+		bottom: 0
+		right: 0
+		padding: 4px 10px
+		@include adaptiveFont(14, 12, 18, 16)
+		font-weight: 500
+		border-bottom-right-radius: 8px
+		border-top-left-radius: 8px
+		color: var(--color--white)
+		background-color: var(--color--primary-blue)

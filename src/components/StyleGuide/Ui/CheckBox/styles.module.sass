@@ -1,0 +1,36 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	gap: 8px
+	cursor: pointer
+	& input[type="checkbox"]
+		display: none
+		&:checked + .icon
+			background-color: var(--color--primary-blue)
+			& svg
+				& path
+					fill: var(--color--white)
+	& .icon
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 24px
+		height: 24px
+		padding: 7px 5px
+		border-radius: 4px
+		border: 1px solid var(--color--btn-border)
+		& svg
+			& path
+				fill: transparent
+	& .label
+		@include adaptiveFont(14, 12, 18, 16)
+		color: var(--color--primary)
+
+@media (max-width: 1366px)
+	.root
+		& .icon
+			width: 20px
+			height: 20px
+			padding: 5px 3px

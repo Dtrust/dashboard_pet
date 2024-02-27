@@ -1,0 +1,80 @@
+@import '../../../sass/functions'
+@import '../../../sass/mixins'
+
+.root
+	width: calc(100% - 40px)
+	max-width: 1355px
+	& .title
+		@include flexCenter
+		gap: 5px
+		margin-bottom: 16px
+		& .titleType
+			@include adaptiveFont(24, 18, 30, 22)
+			font-weight: 500
+			color: var(--color--primary)
+			&.titleTxt
+				color: var(--color--primary-blue)
+	& .panel
+		@include flexCenter
+		padding: 8px 10px
+		border-radius: 8px
+		background-color: var(--color--bg)
+		& .panelWrap
+			@include flexCenter
+			gap: 8px
+			&.actionsWrap
+				flex: 1
+				justify-content: flex-end
+			& > svg
+				width: 24px
+				height: 24px
+		& .infoTxt
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+		& .actionBtn
+			border: 1px solid var(--color--btn-border)
+			background-color: var(--color--input-field-bg)
+			&:hover
+				background-color: var(--color--btn-hover-background)
+				& svg
+					width: 24px
+					height: 24px
+					& path
+						fill: var(--color--btn-hover-icon)
+			& svg
+				& path
+					fill: var(--color--primary)
+		& .searchInput
+			background-color: var(--color--input-field-bg)
+		& .selectList
+			max-width: 140px
+		& .currentTime
+			@include adaptiveFont(14, 12, 18, 16)
+			color: var(--color--primary)
+			opacity: .8
+	& .content
+		margin-top: 7px
+		& .dataGrid
+			& > div
+				color: var(--color--primary)
+				background-color: transparent
+	& .btnWrap
+		margin-top: 16px
+		@include flexCenter
+		justify-content: center
+		& .btnClose
+			& svg
+				& path
+					stroke: none
+					fill: var(--color--white)
+
+
+@media (max-width: 1366px)
+	.root
+		width: calc(100% - 60px)
+		max-width: unset
+		& .panel
+			& .actionBtn
+					& svg
+						width: 20px
+						height: 20px

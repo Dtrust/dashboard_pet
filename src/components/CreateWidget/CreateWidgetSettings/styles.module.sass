@@ -1,0 +1,91 @@
+@import '../../../sass/mixins'
+
+.root
+	&.horizontal
+		display: flex
+		gap: 20px
+		& .wrap
+			width: 50%
+	& .wrap
+		margin-bottom: 20px
+		& .settingItem
+			&:not(:last-of-type)
+				margin-bottom: 16px
+			& .settingItemTitle
+				margin-bottom: 4px
+				@include adaptiveFont(14, 12, 18, 16)
+				font-weight: 500
+				text-transform: uppercase
+				color: var(--color--primary-blue)
+			& .settingPeriod
+				@include flexCenter
+				column-gap: 20px
+				row-gap: 10px
+				flex-wrap: wrap
+				& > .createPagePeriod
+					flex: 1
+					& > div
+						width: 100%
+						margin-left: unset
+						& > :nth-of-type(1)
+							flex: 0 0 75%
+							& > *
+								flex: 1
+				& .settingSwitchWrap
+					@include flexCenter
+					gap: 8px
+					& .settingSwitchTitle
+						@include adaptiveFont(14, 12, 18, 16)
+						color: var(--color--primary)
+			& .settingItemWrap
+				display: flex
+				align-items: flex-end
+				gap: 8px
+				& .settingField
+					flex: 0 0 32%
+					&.disabled
+						opacity: .15
+						pointer-events: none
+					& .settingFieldLabel
+						display: block
+						margin-bottom: 8px
+						@include adaptiveFont(14, 12, 18, 16)
+						font-weight: 500
+						color: var(--color--primary)
+	& .settingTableWrap
+		@include flexCenter
+		gap: 12px
+
+
+
+.table
+	width: 100%
+	border-collapse: collapse
+	border-spacing: 8px 0
+	margin-left: -8px
+	& thead
+		& tr
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 8px
+				display: block
+				width: 100%
+				height: 1px
+				background-color: var(--color--btn-border)
+			& td
+				padding: 16px 8px
+				@include adaptiveFont(14, 12, 18, 16)
+				font-weight: 500
+				color: var(--color--primary)
+
+@media (max-width: 1366px)
+	.root
+		& .settingTableWrap
+			gap: 8px
+			//& .settingTableBlock
+			//	padding: 8px 12px
+			//	& .tableBlockTitle
+			//		margin-bottom: 5px

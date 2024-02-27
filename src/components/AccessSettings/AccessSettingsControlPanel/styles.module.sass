@@ -1,0 +1,38 @@
+@import '../../../sass/functions'
+@import '../../../sass/mixins'
+
+.root
+	border-top: 1px solid
+	border-bottom: 1px solid
+	border-color: var(--color--stroke)
+	background-color: var(--color--dashboard-control-panel-bg)
+	& .content
+		display: flex
+		align-items: flex-end
+		padding-top: 60px
+		padding-bottom: 16px
+		gap: 12px
+		& .divider
+			height: 40px
+		& .backBtn
+			padding: 10px
+		& .settingField
+			flex: 1
+			&.disabled
+				opacity: .15
+				pointer-events: none
+			& .settingFieldLabel
+				display: block
+				margin-bottom: 8px
+				@include adaptiveFont(14, 12, 18, 16)
+				font-weight: 500
+				color: var(--color--primary)
+		& .saveBtn
+			background-color: var(--color--primary-blue)
+			&:hover
+				background-color: var(--color--p-hover)
+			& svg
+				width: 20px
+				height: 20px
+				& path
+					fill: var(--color--white)

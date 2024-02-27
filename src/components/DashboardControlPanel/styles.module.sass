@@ -1,0 +1,38 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	padding: 8px 0
+	border-top: 1px solid
+	border-bottom: 1px solid
+	border-color: var(--color--stroke)
+	background-color: var(--color--dashboard-control-panel-bg)
+	& .container
+		@include flexCenter
+		justify-content: space-between
+		gap: 8px
+		flex-wrap: wrap
+		& .panelWrap
+			@include flexCenter
+			gap: 8px
+		& .btn
+			padding: 6px 12px
+			&.active
+				color: var(--color--white)
+				background-color: var(--color--primary-blue)
+				& svg
+					& path
+						fill: var(--color--white)
+.settings
+	border-bottom-width: 1px
+	border-bottom-style: solid
+	border-bottom-color: var(--color--stroke)
+	& .settingsWrap
+		@include flexCenter
+		gap: 12px
+		flex-wrap: wrap
+		& .dashboardSettings
+			@include flexCenter
+			flex-wrap: wrap
+			gap: 4px
+			padding: 8px 0

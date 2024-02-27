@@ -1,0 +1,35 @@
+@import './src/sass/mixins'
+
+.root
+	position: relative
+	padding: 12px 0
+	background-color: var(--color--bg)
+	& .logo
+		fill: var(--color--primary)
+	& .headerContent
+		@include flexCenter
+		gap: 16px
+	& .headerWrap
+		@include flexCenter
+		flex: 1
+		justify-content: flex-end
+		gap: 8px
+	& .headerMarker
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
+		bottom: -32px
+		padding: 8px 12px
+		@include adaptiveFont(14, 12, 16, 16)
+		font-weight: 500
+		text-transform: uppercase
+		border-radius: 0 0 8px 8px
+		color: var(--color--white)
+		background-color: var(--color--primary-blue)
+
+@media (max-width: 1366px)
+	.root
+		padding: 8px 0
+		& .headerMarker
+			bottom: -25px
+			padding: 4px 8px

@@ -1,0 +1,46 @@
+@import '../../sass/mixins'
+
+.root
+	position: relative
+	background-color: var(--color--dashboard-control-panel-bg)
+	height: calc(100vh - 192px)
+	& .splitPane
+		position: relative!important
+		& .resizer
+			@include flexCenter
+			justify-content: center
+			gap: 4px
+			&.vertical
+				flex-direction: column
+			&::before,
+			&::after
+				content: ''
+				display: block
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: var(--color--grey)
+		&.horizontal
+			& .paneContent
+				& .panePreviewWrap
+					width: 50%
+		& .paneContent
+			height: 100%
+			padding-top: 24px
+			padding-bottom: 24px
+			overflow: auto
+			@include scrollBar
+			& .panePreviewWrap
+				width: 99%
+				padding: 20px
+				border-radius: 12px
+				border-width: 1px
+				border-style: solid
+				border-color: var(--color--btn-border)
+				background-color: var(--color--dashboard-control-panel-bg)
+
+
+
+@media (max-width: 1366px)
+	.root
+		height: calc(100vh - 165px)

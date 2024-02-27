@@ -1,0 +1,18 @@
+@import './src/sass/functions'
+@import './src/sass/mixins'
+
+.root
+	@include flexCenter
+	justify-content: space-between
+	padding: 16px
+	border-radius: 4px
+	background-color: var(--color--second-level)
+	&.warning
+		background-color: var(--color--btn-close-bg)
+	& svg
+		width: 24px
+		height: 24px
+
+@media (max-width: 1366px)
+	.root
+		padding: 8px 12px

@@ -1,0 +1,28 @@
+@import './src/sass/mixins'
+
+.root
+  background-color: var(--color--grid-bg)
+  & .gridContainer
+    padding: 6px 0
+    min-height: calc(100vh - 189px)
+  & .item
+    padding: 20px
+    border-radius: 12px
+    border-width: 1px
+    border-style: solid
+    border-color: var(--color--btn-border)
+    background-color: var(--color--dashboard-control-panel-bg)
+    & > div
+      height: 100%
+    &.emptyWidget
+      border-style: dashed
+      border-color: var(--color--primary-blue)
+      & > span
+        display: none
+
+@media (max-width: 1366px)
+  .root
+    & .gridContainer
+      min-height: calc(100vh - 173px)
+    & .item
+      padding: 12px

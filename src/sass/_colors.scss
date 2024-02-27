@@ -1,0 +1,227 @@
+//--LIGHT_THEME
+$--color-light--primary-blue: hsla(212, 52%, 51%, 1);
+$--color-light--bg: hsla(220, 20%, 97%, 1);
+$--color-light--stroke: hsla(220, 31%, 94%, 1);
+$--color-light--primary: hsla(0, 0%, 22%, 1);
+$--color-light--grey: hsla(0, 0%, 47%, 1);
+$--color-light--primary-light: hsla(210, 100%, 98%, 1);
+$--color-light--task-priority-first: hsla(0, 67%, 53%, 1);
+$--color-light--task-priority-second: hsla(47, 100%, 50%, 1);
+$--color-light--task-priority-third: hsla(111, 51%, 51%, 1);
+$--color-light--white: hsla(0, 0%, 100%, 1);
+$--color-light--first-level: hsla(213, 100%, 96%, 1);
+$--color-light--second-level: hsla(0, 0%, 98%, 1);
+$--color-light--third-level: hsla(220, 89%, 89%, 1);
+$--color-light--fourth-level: hsla(216, 83%, 50%, 1);
+$--color-light--p-hover: hsla(212, 66%, 58%, 1);
+$--color-light--p-click: hsla(213, 54%, 46%, 1);
+$--color-light--cancel-hover: hsl(213, 39%, 72%, 1);
+$--color-light--editor: hsla(0, 0%, 100%, 1);
+//Buttons
+$--color-light--btn-hover-color: $--color-light--primary;
+$--color-light--btn-hover-background: $--color-light--primary-light;
+$--color-light--btn-hover-icon: $--color-light--p-hover;
+$--color-light--btn-cancel: $--color-light--white;
+$--color--ck--white-color: hsl(210, 100%, 98%);
+
+//Widgets
+$--color-light--count-widget-bg: hsla(107, 100%, 98%, 1);
+
+//--DARK_THEME
+$--color-dark--primary-blue: hsla(212, 52%, 51%, 1);
+$--color-dark--bg: hsla(213, 22%, 16%, 1);
+$--color-dark--stroke: hsla(214, 23%, 25%, 1);
+$--color-dark--primary: hsla(0, 0%, 100%, 1);
+$--color-dark--grey: hsla(213, 26%, 61%, 1);
+$--color-dark--primary-light: hsla(215, 21%, 30%, 1);
+$--color-dark--task-priority-first: hsla(0, 93%, 64%, 1);
+$--color-dark--task-priority-second: hsla(47, 100%, 68%, 1);
+$--color-dark--task-priority-third: hsla(111, 51%, 51%, 1);
+$--color-dark--white: hsla(0, 0%, 100%, 1);
+$--color-dark--first-level: hsla(214, 22%, 20%, 1);
+$--color-dark--second-level: hsla(215, 22%, 23%, 1);
+$--color-dark--third-level: hsla(215, 21%, 30%, 1);
+$--color-dark--fourth-level: hsla(215, 21%, 36%, 1);
+$--color-dark--p-hover: hsla(212, 66%, 58%, 1);
+$--color-dark--p-click: hsla(213, 54%, 46%, 1);
+$--color-dark--cancel-hover: hsl(213, 39%, 72%, 1);
+$--color-dark--editor: hsla(215, 22%, 23%, 1);
+//Buttons
+$--color-dark--btn-hover-color: $--color-dark--white;
+$--color-dark--btn-hover-background: $--color-dark--first-level;
+$--color-dark--btn-hover-icon: $--color-dark--white;
+$--color-dark--btn-cancel: $--color-dark--grey;
+//Widgets
+$--color-dark--count-widget-bg: hsla(111.496, 51%, 51%, .08);
+$--color--ck--blue-color: hsla(212, 52%, 51%, 1);
+
+//PieChart
+$--color-orange-pie-chart: hsla(36, 97%, 49%, 1);
+$--color-nightBlue-pie-chart: hsla(212, 52%, 51%, 1);
+$--color-green-pie-chart: hsla(130, 62%, 49%, 1);
+$--color-purple-pie-chart: hsla(277, 62%, 49%, 1);
+
+:root,
+[data-theme="light"] {
+	--color--editor: #{ $--color-light--editor };
+	--color--cancel-hover: #{ $--color-light--cancel-hover };
+	--color--primary-blue: #{ $--color-light--primary-blue };
+	--color--bg: #{ $--color-light--bg };
+	--color--stroke: #{ $--color-light--stroke };
+	--color--primary: #{ $--color-light--primary };
+	--color--grey: #{ $--color-light--grey };
+	--color--primary-light: #{ $--color-light--primary-light };
+	--color--task-priority-first: #{ $--color-light--task-priority-first };
+	--color--task-priority-second: #{ $--color-light--task-priority-second };
+	--color--task-priority-third: #{ $--color-light--task-priority-third };
+	--color--white: #{ $--color-light--white };
+	--color--first-level: #{ $--color-light--first-level };
+	--color--second-level: #{ $--color-light--second-level };
+	--color--third-level: #{ $--color-light--third-level };
+	--color--fourth-level: #{ $--color-light--fourth-level };
+	--color--p-hover: #{ $--color-light--p-hover };
+	--color--p-click: #{ $--color-light--p-click };
+	--color--bg--table: #{ $--color-dark--white };
+	//Buttons
+	--color--btn-cancel: #{ --color-light--btn-cancel };
+	--color--btn-hover-background: #{ $--color-light--btn-hover-background };
+	--color--btn-hover-color: #{ $--color-light--btn-hover-color };
+	--color--btn-hover-icon: #{
+	 $--color-light--btn-hover-icon
+	};
+	--color--btn-close-bg: hsla(0, 100%, 98%, 1);
+	--color--btn-border: #{ $--color-light--stroke };
+	//Header Buttons
+	--color--header-btn-icon-color: #{ $--color-light--grey };
+	//Dashboard Control Panel
+	--color--dashboard-control-panel-bg: #{ $--color-light--white };
+	//Dashboard Grid Selector
+	--color--dashboard-grid-selector-bg: #{ $--color-light--white };
+	--color--dashboard-grid-selector-selected-cell-bg: #{ $--color-light--first-level };
+	//Dashboard Progress Percent
+	--color--dashboard-progress-percent-color: #{ $--color-dark--primary-blue };
+	//Tab Buttons
+	--color--tab-btn-bg: #{ $--color-light--primary-light };
+	//Input Fields
+	--color--input-field-bg: #{ $--color-light--white };
+	--color--input-placeholder: hsla(0, 0%, 61%, 1);
+	//Typography
+	--color--label-color: #{ $--color-light--primary-blue };
+	//Scroll Bar bg
+	--color--scrollbar-bg: #{ $--color-light--bg };
+	//Grid background
+	--color--grid-bg: #{ $--color-light--white };
+	//Resize icon
+	--color--resize-icon: #{ $--color-light--grey };
+	//Widgets
+	--color--widget-count-bg: #{ $--color-light--count-widget-bg };
+	//Switcher bg
+	--color--switcher-bg: #{ $--color-light--grey };
+	// Target Panel
+	--color--target-btn-bg: hsla(210, 100%, 98%, 1);
+	--color--target-input-bg: #{ $--color-light--white };
+	// Filter Panel
+	--color--filter-content-bg: #{ $--color-light--second-level };
+	--color--filter-content-border: #{ $--color-light--second-level };
+	--color--filter-row-bg: #{ $--color-dark--primary };
+	--color-filter--select-bg-alt: hsla(210, 100%, 98%, 1);
+	//ckeditor
+	--ck-color-button-default-active-background: #{ $--color--ck--white-color };
+	--ck-color-button-default-hover-background: #{ $--color--ck--white-color };
+	--ck-color-button-on-background: #{ $--color--ck--white-color };
+	--ck-color-list-button-on-background: #{ $--color--ck--white-color };
+	--ck-color-list-button-hover-background: #{ $--color--ck--white-color };
+	--ck-color-list-button-on-background-focus: #{ $--color--ck--white-color };
+	--ck-color-split-button-hover-background: #f7f6f6;
+
+	//confirmModal
+	--color--danger: hsla(0, 66%, 53%, 1);
+	--color--message-bg: hsla(0, 0%, 98%, 1);
+}
+
+:root,
+[data-theme="dark"] {
+	--color--editor: #{ $--color-dark--editor };
+	--color--cancel-hover: #{ $--color-dark--cancel-hover };
+	--color--primary-blue: #{ $--color-dark--primary-blue };
+	--color--bg: #{ $--color-dark--bg };
+	--color--stroke: #{ $--color-dark--stroke };
+	--color--primary: #{ $--color-dark--primary };
+	--color--grey: #{ $--color-dark--grey };
+	--color--primary-light: #{ $--color-dark--primary-light };
+	--color--task-priority-first: #{ $--color-dark--task-priority-first };
+	--color--task-priority-second: #{ $--color-dark--task-priority-second };
+	--color--task-priority-third: #{ $--color-dark--task-priority-third };
+	--color--white: #{ $--color-dark--white };
+	--color--first-level: #{ $--color-dark--first-level };
+	--color--second-level: #{ $--color-dark--second-level };
+	--color--third-level: #{ $--color-dark--third-level };
+	--color--fourth-level: #{ $--color-dark--fourth-level };
+	--color--p-hover: #{ $--color-dark--p-hover };
+	--color--p-click: #{ $--color-dark--p-click };
+	--color--bg--table: #{ $--color-dark--first-level };
+	//Buttons
+	--color--btn-cancel: #{ $--color-dark--btn-cancel };
+	--color--btn-hover-background: hsla(213, 31%, 25%, 1);
+	--color--btn-hover-color: #{ $--color-dark--btn-hover-color };
+	--color--btn-hover-icon: #{
+	 $--color-dark--btn-hover-icon
+	};
+	--color--btn-border: #{ $--color-dark--third-level };
+	--color--btn-close-bg: hsla(317, 13%, 27%, 1);
+	//Header Buttons
+	--color--header-btn-icon-color: #{ $--color-dark--grey };
+	//Dashboard Control Panel
+	--color--dashboard-control-panel-bg: #{ $--color-dark--first-level };
+	//Dashboard Grid Selector
+	--color--dashboard-grid-selector-bg: #{ $--color-dark--third-level };
+	--color--dashboard-grid-selector-selected-cell-bg: #{ $--color-dark--primary-blue };
+	//Dashboard Progress Percent
+	--color--dashboard-progress-percent-color: #{ $--color-dark--white };
+	//Tab Buttons
+	--color--tab-btn-bg: #{ $--color-dark--primary-blue };
+	//Input Fields
+	--color--input-field-bg: #{ $--color-dark--second-level };
+	--color--input-placeholder: hsla(213, 26%, 61%, 1);
+	//Typography
+	--color--label-color: hsla(213, 26%, 61%, 1);
+	//Scroll Bar bg
+	--color--scrollbar-bg: #{ $--color-dark--third-level };
+	//Grid background
+	--color--grid-bg: #{ $--color-dark--bg };
+	//Resize icon
+	--color--resize-icon: #{ $--color-dark--primary };
+	//Widgets
+	--color--widget-count-bg: #{ $--color-dark--count-widget-bg };
+	//Switcher bg
+	--color--switcher-bg: hsla(215, 16%, 29%, 1);
+	// Target Panel
+	--color--target-btn-bg: #{ $--color-dark--second-level };
+	--color--target-input-bg: #{ $--color-dark--second-level };
+	// Filter Panel
+	--color--filter-content-bg: #{ $--color-dark--first-level };
+	--color--filter-content-border: #{ $--color-dark--third-level };
+	--color--filter-row-bg: #{ $--color-dark--second-level };
+	--color-filter--select-bg-alt: #{ $--color-dark--first-level };
+
+	// ckeditor
+	--ck-color-button-default-active-background: #{ $--color--ck--blue-color };
+	--ck-color-button-default-hover-background: #{ $--color--ck--blue-color };
+	--ck-color-button-on-background: #{ $--color--ck--blue-color };
+	--ck-color-button-on-hover-background: #{ $--color--ck--blue-color };
+	--ck-color-button-on-active-background: #{ $--color--ck--blue-color };
+	--ck-color-list-button-on-background: #{ $--color--ck--blue-color };
+	--ck-color-list-button-hover-background: #{ $--color--ck--blue-color };
+	--ck-color-list-button-on-background-focus: #{ $--color--ck--blue-color };
+	--ck-color-split-button-hover-background: #{ $--color-dark--p-click };
+	--ck-color-button-on-color: hsla(210, 100%, 98%, 1);
+
+	//confirmModal
+	--color--danger: hsla(0, 0%, 100%, 1);
+	--color--message-bg: hsla(215, 22%, 23%, 1);
+	//PieChart
+	--color-orange-pie-chart: #{ $--color-orange-pie-chart };
+	--color-nightBlue-pie-chart: #{ $--color-nightBlue-pie-chart };
+	--color-green-pie-chart: #{ $--color-green-pie-chart };
+	--color-purple-pie-chart: #{ $--color-purple-pie-chart };
+}

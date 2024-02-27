@@ -1,0 +1,33 @@
+@import '../../../sass/mixins'
+
+.root
+  width: 100%
+  max-height: 1px
+
+  .table
+    @include scrollBar
+    border-radius: 8px
+    border: 1px solid var(--color--stroke)
+    max-height: 240px
+    
+  .text_table
+    font-size: 14px
+    font-weight: 500
+    color: var(--color--grey)
+    text-transform: uppercase
+
+  .text_time
+    color: var(--color--grey)
+
+  .text_courier
+    font-weight: 500
+    color: var(--color--primary)
+
+  .text_on_time
+    color: var(--color--primary)
+
+  .table_row 
+    display: flex
+    align-items: center
+
+  
